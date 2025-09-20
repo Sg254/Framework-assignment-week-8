@@ -1,0 +1,10 @@
+from collections import Counter
+import re
+
+# Tokenize titles
+words = []
+for title in df_clean['title'].dropna():
+    words.extend(re.findall(r'\w+', title.lower()))
+
+common_words = Counter(words).most_common(20)
+print(common_words)
