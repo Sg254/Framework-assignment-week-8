@@ -1,0 +1,1 @@
+year_counts = df_clean['year'].value_counts().sort_index()
