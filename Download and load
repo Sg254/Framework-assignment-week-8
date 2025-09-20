@@ -1,0 +1,7 @@
+import pandas as pd
+
+# Load metadata.csv (after downloading from CORD-19)
+df = pd.read_csv("metadata.csv")
+
+# Preview
+df.head()
