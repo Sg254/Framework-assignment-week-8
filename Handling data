@@ -1,0 +1,7 @@
+
+# Identify high missing columns
+missing_ratio = df.isnull().mean().sort_values(ascending=False)
+print(missing_ratio.head(10))
+
+# Drop rows where essential info (title, abstract, publish_time) is missing
+df_clean = df.dropna(subset=['title', 'abstract', 'publish_time'])
