@@ -1,0 +1,11 @@
+# Shape of the dataset
+print("Shape:", df.shape)
+
+# Column info
+print(df.info())
+
+# Check missing values
+print(df.isnull().sum())
+
+# Summary stats for numerical cols
+print(df.describe())
