@@ -1,0 +1,9 @@
+
+# Convert publish_time to datetime
+df_clean['publish_time'] = pd.to_datetime(df_clean['publish_time'], errors='coerce')
+
+# Extract publication year
+df_clean['year'] = df_clean['publish_time'].dt.year
+
+# Abstract word count
+df_clean['abstract_word_count'] = df_clean['abstract'].apply(lambda x: len(str(x).split()))
